@@ -1,7 +1,7 @@
 {
   "name": "ms-ra-forwarder-server",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ms-ra-forwarder 独立 node 服务包：Edge 朗读 TTS 核心抽出，零框架单文件运行",
   "type": "module",
   "engines": {

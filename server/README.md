@@ -67,12 +67,12 @@ curl "http://127.0.0.1:38080/api/text-to-speech?voice=zh-CN-XiaoxiaoNeural&text=
 DsPlayer 阅读设置 → 网络朗读 → 导入音色包，粘贴（本服务自建实例为例）：
 
 ```json
-[{"name":"晓晓(自建)","contentType":"audio/mpeg","header":"","url":"http://127.0.0.1:38080/api/text-to-speech?voice=zh-CN-XiaoxiaoNeural&rate=0&volume=100&pitch=0&text={{speakText}}"}]
+[{"name":"晓晓(自建)","contentType":"audio/mpeg","header":"","url":"http://127.0.0.1:38080/api/text-to-speech?voice=zh-CN-XiaoxiaoNeural&rate={{speakSpeedPct}}&volume=100&pitch=0&text={{speakText}}"}]
 ```
 
 注意：`{{...}}` 内只支持 `{{speakText}}/{{speakSpeed}}/{{vol}}/{{pitch}}` 四个
 变量直替；ms-ra-forwarder 网页导出的 legado 链接含 `{{(speakSpeed - 10) * 2}}`
-等 JS 表达式，DsPlayer 不执行（导入时会提示跳过）——把 `rate` 写死为数字即可。
+等 JS 表达式，DsPlayer 不执行（导入时会提示跳过）——用 `{{speakSpeedPct}}` 变量即随 UI 语速换算（SSML 百分比偏移：1.5x→+50）。
 legado 等支持表达式的消费方不受此限。
 
 ## 宿主拉起约定（供嵌入方参考）

@@ -24,7 +24,7 @@ MANIFEST = {
     'serviceName': 'Edge 朗读 TTS',
     'desc': '微软 Edge 朗读 TTS 转发（ms-ra-forwarder 核心单文件版）。启动后网络音色包填 '
             'http://127.0.0.1:38080/api/text-to-speech?voice=zh-CN-XiaoxiaoNeural'
-            '&rate=0&volume=100&pitch=0&text={{speakText}}。仅供学习，请勿商用。',
+            '&rate={{speakSpeedPct}}&volume=100&pitch=0&text={{speakText}}。仅供学习，请勿商用。',
 }
 
 USAGE_TXT = '''Edge 朗读 TTS 服务（ms-ra-forwarder 核心单文件版）
@@ -43,7 +43,7 @@ USAGE_TXT = '''Edge 朗读 TTS 服务（ms-ra-forwarder 核心单文件版）
 
 DsPlayer 接入：阅读 → 设置 → 朗读引擎切「网络」→ 导入音色包：
   [{"name":"晓晓(本地TTS)","contentType":"audio/mpeg",
-    "url":"http://127.0.0.1:38080/api/text-to-speech?voice=zh-CN-XiaoxiaoNeural&rate=0&volume=100&pitch=0&text={{speakText}}"}]
+    "url":"http://127.0.0.1:38080/api/text-to-speech?voice=zh-CN-XiaoxiaoNeural&rate={{speakSpeedPct}}&volume=100&pitch=0&text={{speakText}}"}]
 
 换音色：把 voice= 换成 /api/voices 里任意 ShortName（如 YunyangNeural）。
 仅供学习参考，请勿商用。
