@@ -61,6 +61,7 @@ export class EdgeTTSService implements TTSService {
         let voices = data.map((item: any) => {
             const voice: Voice = {
                 label: item['FriendlyName'],
+                shortName: item['ShortName'],
                 gender: item['Gender'],
                 value: item['Name'],
                 locale: item['Locale'],

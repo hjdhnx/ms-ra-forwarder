@@ -9,6 +9,8 @@
 export interface Voice {
     value: string
     label: string
+    /** 请求 voice= 参数所需（如 zh-CN-XiaoxiaoNeural）；独立服务包 0.1.2 起提供 */
+    shortName: string
     locale: string
     gender: string
     format: string
