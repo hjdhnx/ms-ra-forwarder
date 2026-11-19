@@ -97,7 +97,7 @@ TTS」服务（需先装 nodejs / nodejs-win 运行时插件），默认端口 *
 无 env 透传，端口包内写死）。上架物料生成（在 server/ 目录）：
 
 ```bash
-npm run build && python pack.py   # dist/ra-tts-0.1.0.zip + md5 打印
+npm run build npm run build && python pack.py   # dist/ra-tts-0.1.0.zip + md5 打印npm run build && python pack.py   # dist/ra-tts-0.1.0.zip + md5 打印 python pack.py   # dist/ra-tts-<版本>.zip + md5 打印
 ```
 
 服务启动后，DsPlayer 网络音色包按上文模板填 `http://127.0.0.1:38080/...`。
