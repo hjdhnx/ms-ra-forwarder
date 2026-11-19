@@ -1,0 +1,28 @@
+{
+  "name": "ms-ra-forwarder-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ms-ra-forwarder 独立 node 服务包：Edge 朗读 TTS 核心抽出，零框架单文件运行",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node dist/ra-server.cjs",
+    "dev": "node build.mjs && node dist/ra-server.cjs",
+    "typecheck": "tsc --noEmit",
+    "check": "node build.mjs && node check.mjs"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "fast-xml-parser": "^4.5.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/ws": "^8.5.13",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0"
+  }
+}
